@@ -18615,7 +18615,7 @@ var images = function images() {
   var imgPopup = document.createElement('div'),
       workSection = document.querySelector('.works'),
       bigImg = document.createElement('img');
-  imgPopup.classList.add('popup');
+  imgPopup.classList.add('popupImg');
   bigImg.classList.add('popup__big-img');
   imgPopup.appendChild(bigImg);
   workSection.appendChild(imgPopup);
@@ -18632,7 +18632,7 @@ var images = function images() {
       bigImg.setAttribute('src', path);
     }
 
-    if (target && target.matches('div.popup')) {
+    if (target && target.matches('div.popupImg')) {
       imgPopup.style.display = 'none';
     }
   });
@@ -18718,7 +18718,8 @@ var modals = function modals() {
   bindModul('.phone-link', '.popup', '.popup .popup__close');
   bindModul('.popup__calc-btn', '.popup__calc', '.popup__calc-close');
   bindModul('.popup__calc-button', '.popup__calc-profile', '.popup__calc-profile-close', false);
-  bindModul('.popup__calc-profile-button', '.popup__calc-end', '.popup__calc-end-close', false); // showModalByTime('.popup', 6000);
+  bindModul('.popup__calc-profile-button', '.popup__calc-end', '.popup__calc-end-close', false);
+  showModalByTime('.popup', 6000);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);
